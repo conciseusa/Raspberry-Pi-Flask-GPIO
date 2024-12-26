@@ -8,7 +8,7 @@ import datetime
 # https://learn.sparkfun.com/tutorials/raspberry-gpio/python-rpigpio-api
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(25, GPIO.IN)
+GPIO.setup(25, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 state = GPIO.input(25)
 if state:
